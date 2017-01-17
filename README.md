@@ -31,8 +31,8 @@ Demo: https://trendmicro-frontend.github.io/react-interpolate
             <span
                 style={{
                     border: '1px solid #ccc',
-                    padding: '5px 10px' }}
-                >
+                    padding: '5px 10px'
+                }}
             >
                 20
             </span>
@@ -48,8 +48,8 @@ Demo: https://trendmicro-frontend.github.io/react-interpolate
 ```js
 <Interpolate
     replacement={[
-        <i>2017-01-01T00:00:00Z</i>,
-        <i>2017-01-10T23:59:59Z</i>
+        <i>{'2017-01-01T00:00:00Z'}</i>,
+        <i>{'2017-01-10T23:59:59Z'}</i>
     ]}
 >
     {'From {{0}} to {{1}}'}
