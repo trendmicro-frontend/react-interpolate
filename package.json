@@ -1,0 +1,75 @@
+{
+  "name": "@trendmicro/react-interpolate",
+  "version": "0.5.0",
+  "description": "A React component that renders elements into a format string containing replacement fields.",
+  "main": "lib/index.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm run lint && npm test && npm run clean && npm run bowersync && npm run build && npm run build-examples",
+    "bowersync": "./scripts/bowersync",
+    "build": "babel --out-dir ./lib ./src",
+    "build-examples": "cd examples; webpack",
+    "clean": "rm -f lib/*",
+    "demo": "http-server -p 8000 docs/",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
+    "test": "./babel-tap --coverage test/*.js",
+    "coveralls": "./babel-tap --coverage --coverage-report=text-lcov test/*.js | node_modules/.bin/coveralls",
+    "dev": "cd examples; webpack-dev-server --hot --inline --host 0.0.0.0 --port 8000 --content-base ../docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trendmicro-frontend/react-interpolate.git"
+  },
+  "author": "",
+  "contributors": [
+    {
+      "name": "",
+      "email": "",
+      "url": "https://github.com/trendmicro-frontend"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trendmicro-frontend/react-interpolate/issues"
+  },
+  "homepage": "https://github.com/trendmicro-frontend/react-interpolate",
+  "keywords": [
+    "react",
+    "react-interpolate"
+  ],
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0"
+  },
+  "dependencies": {
+    "react-addons-shallow-compare": "^0.14.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "~6.18.0",
+    "babel-core": "~6.21.0",
+    "babel-eslint": "~7.1.1",
+    "babel-loader": "~6.2.10",
+    "babel-plugin-transform-decorators-legacy": "~1.3.4",
+    "babel-preset-es2015": "~6.18.0",
+    "babel-preset-react": "~6.16.0",
+    "babel-preset-stage-0": "~6.16.0",
+    "coveralls": "~2.11.15",
+    "eslint": "~3.12.2",
+    "eslint-config-trendmicro": "~0.5.1",
+    "eslint-loader": "~1.6.1",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jsx-a11y": "~2.2.3",
+    "eslint-plugin-react": "~6.8.0",
+    "html-webpack-plugin": "~2.24.1",
+    "http-server": "~0.9.0",
+    "json-loader": "~0.5.4",
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0",
+    "tap": "~8.0.1",
+    "webpack": "~1.14.0",
+    "webpack-dev-server": "~1.16.2"
+  }
+}
