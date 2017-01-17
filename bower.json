@@ -2,11 +2,7 @@
   "name": "@trendmicro/react-interpolate",
   "description": "A React component that renders elements into a format string containing replacement fields.",
   "authors": [
-    {
-      "name": "",
-      "email": "",
-      "homepage": "https://github.com/trendmicro-frontend"
-    }
+    "Cheton Wu <cheton_wu@trend.com.tw>"
   ],
   "homepage": "https://github.com/trendmicro-frontend/react-interpolate",
   "snapshots": [],
