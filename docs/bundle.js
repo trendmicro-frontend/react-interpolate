@@ -62,17 +62,98 @@
 	
 	var App = function App() {
 	    return _react2.default.createElement(
-	        _src2.default,
-	        {
-	            replacement: {
-	                number: _react2.default.createElement(
-	                    'span',
-	                    { style: { border: '1px solid #ccc', padding: 5 } },
-	                    '20'
+	        'div',
+	        { className: 'container-fluid' },
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'A React component that renders elements into a format string containing replacement fields. It comes in handy when working with dynamic text elements like localized strings of a translation library.'
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'panel panel-default' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'panel-heading' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'panel-title' },
+	                    'Object Keys'
 	                )
-	            }
-	        },
-	        '{{number}} groups enabled'
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'panel-body' },
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Example: ',
+	                    _react2.default.createElement(
+	                        'strong',
+	                        null,
+	                        '{{number}} groups enabled'
+	                    )
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    _src2.default,
+	                    {
+	                        replacement: {
+	                            number: _react2.default.createElement(
+	                                'span',
+	                                { style: { border: '1px solid #ccc', padding: '5px 10px' } },
+	                                '20'
+	                            )
+	                        }
+	                    },
+	                    '{{number}} groups enabled'
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'panel panel-default' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'panel-heading' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'panel-title' },
+	                    'Array Keys'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'panel-body' },
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Example: ',
+	                    _react2.default.createElement(
+	                        'strong',
+	                        null,
+	                        'From {{0}} to {{1}}'
+	                    )
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    _src2.default,
+	                    {
+	                        replacement: [_react2.default.createElement(
+	                            'i',
+	                            null,
+	                            '2017-01-01T00:00:00Z'
+	                        ), _react2.default.createElement(
+	                            'i',
+	                            null,
+	                            '2017-01-10T23:59:59Z'
+	                        )]
+	                    },
+	                    'From {{0}} to {{1}}'
+	                )
+	            )
+	        )
 	    );
 	};
 	
@@ -25992,4 +26073,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.js.map?8e9e7af6a78bcf7163ae
+//# sourceMappingURL=bundle.js.map?64bfdc43de19fb60ba6a
