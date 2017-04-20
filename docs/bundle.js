@@ -6746,42 +6746,6 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "../node_modules/react-addons-shallow-compare/index.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- * @providesModule shallowCompare
- */
-
-
-
-var shallowEqual = __webpack_require__("../node_modules/fbjs/lib/shallowEqual.js");
-
-/**
- * Does a shallow comparison for props and state.
- * See ReactComponentWithPureRenderMixin
- * See also https://facebook.github.io/react/docs/shallow-compare.html
- */
-function shallowCompare(instance, nextProps, nextState) {
-  return (
-    !shallowEqual(instance.props, nextProps) ||
-    !shallowEqual(instance.state, nextState)
-  );
-}
-
-module.exports = shallowCompare;
-
-
-/***/ }),
-
 /***/ "../node_modules/react-dom/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26795,7 +26759,6 @@ module.exports = function(module) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -26813,10 +26776,6 @@ var _react = __webpack_require__("../node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactAddonsShallowCompare = __webpack_require__("../node_modules/react-addons-shallow-compare/index.js");
-
-var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26825,21 +26784,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var _default = (_temp = _class = function (_Component) {
-    _inherits(_default, _Component);
+var Interpolate = (_temp = _class = function (_PureComponent) {
+    _inherits(Interpolate, _PureComponent);
 
-    function _default() {
-        _classCallCheck(this, _default);
+    function Interpolate() {
+        _classCallCheck(this, Interpolate);
 
-        return _possibleConstructorReturn(this, (_default.__proto__ || Object.getPrototypeOf(_default)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Interpolate.__proto__ || Object.getPrototypeOf(Interpolate)).apply(this, arguments));
     }
 
-    _createClass(_default, [{
-        key: 'shouldComponentUpdate',
-        value: function shouldComponentUpdate(nextProps, nextState) {
-            return (0, _reactAddonsShallowCompare2.default)(this, nextProps, nextState);
-        }
-    }, {
+    _createClass(Interpolate, [{
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -26889,8 +26843,8 @@ var _default = (_temp = _class = function (_Component) {
         }
     }]);
 
-    return _default;
-}(_react.Component), _class.propTypes = {
+    return Interpolate;
+}(_react.PureComponent), _class.propTypes = {
     format: _propTypes2.default.string,
     parent: _propTypes2.default.string,
     prefix: _propTypes2.default.string,
@@ -26901,8 +26855,7 @@ var _default = (_temp = _class = function (_Component) {
     prefix: '{{',
     suffix: '}}'
 }, _temp);
-
-exports.default = _default;
+exports.default = Interpolate;
 
 /***/ }),
 
@@ -27044,4 +26997,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map?83b13e4b8a3e575335a5
+//# sourceMappingURL=bundle.js.map?bef04690efc412f8c4b3

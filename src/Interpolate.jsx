@@ -1,9 +1,8 @@
 import omit from 'lodash/omit';
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React, { PureComponent } from 'react';
 
-export default class extends Component {
+class Interpolate extends PureComponent {
     static propTypes = {
         format: PropTypes.string,
         parent: PropTypes.string,
@@ -20,9 +19,6 @@ export default class extends Component {
         suffix: '}}'
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return shallowCompare(this, nextProps, nextState);
-    }
     render() {
         const { parent, prefix, suffix, replacement } = this.props;
         const REGEXP = new RegExp(prefix + '(.+?)' + suffix);
@@ -63,3 +59,5 @@ export default class extends Component {
         return React.createElement.apply(this, [parent, props].concat(children));
     }
 }
+
+export default Interpolate;
