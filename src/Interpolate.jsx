@@ -1,4 +1,4 @@
-import omit from 'lodash/omit';
+import omit from 'lodash.omit';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
